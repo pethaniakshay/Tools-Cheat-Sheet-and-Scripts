@@ -39,6 +39,8 @@ With no default password and username as root
   
 With custom root username
   mysqld --initialize-insecure --user=akshay
+  
+  Note:  Add   --explicit_defaults_for_timestamp = 1   as argument if you get timestamp error.
 ```
 
 
