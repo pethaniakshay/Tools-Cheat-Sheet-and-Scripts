@@ -77,3 +77,9 @@ mysqld --install
 
 mysqld --remove
 ```
+
+##### Create New Root Privilaged User
+
+```
+GRANT ALL PRIVILEGES ON *.* TO 'me'@'localhost' IDENTIFIED BY 'you';
+```
