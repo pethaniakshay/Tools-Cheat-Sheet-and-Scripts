@@ -19,3 +19,9 @@ npm install -g @angular/cli
 ```
 ng build --env=local --watch
 ```
+
+##### Rung Angular on Different port on run time
+
+ ```
+ ng serve --port ANOTHERPORT
+ ```
