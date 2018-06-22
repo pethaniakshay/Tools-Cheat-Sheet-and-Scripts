@@ -19,3 +19,15 @@ npm install -g @angular/cli
 ```
 ng build --env=local --watch
 ```
+
+##### Run Angular app for development enviroment
+
+ ```
+ ng serve --port ANOTHERPORT
+ ```
+
+##### Create New project
+
+```
+new new project-name
+```
