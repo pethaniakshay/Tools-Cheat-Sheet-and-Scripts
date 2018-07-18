@@ -83,3 +83,12 @@ mysqld --remove
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'me'@'localhost' IDENTIFIED BY 'you';
 ```
+
+##### Truncate all the table 
+
+```
+mysql -Nse 'show tables' DATABASE_NAME | while read table; do mysql -e "truncate table $table" DATABASE_NAME; done
+```
+```
+mysql -Nse 'show tables' DATABASE -uMYUSER -pMYPASSWORD | while read table; do mysql -e "truncate table $table" DATABASE -uMYUSER -pMYPASSWORD ; done
+```
