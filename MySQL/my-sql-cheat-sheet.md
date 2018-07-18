@@ -92,3 +92,9 @@ mysql -Nse 'show tables' DATABASE_NAME | while read table; do mysql -e "truncate
 ```
 mysql -Nse 'show tables' DATABASE -uMYUSER -pMYPASSWORD | while read table; do mysql -e "truncate table $table" DATABASE -uMYUSER -pMYPASSWORD ; done
 ```
+
+##### Turn off foreign key check
+
+```
+SET FOREIGN_KEY_CHECKS=0;
+```
