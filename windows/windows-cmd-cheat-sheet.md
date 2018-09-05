@@ -14,3 +14,12 @@ SC STOP <service-name>
 
 SC DELETE <service-name>
 ```
+
+
+##### Control cmd output length 
+
+```
+<any-command> | more
+
+e.g. tree | more
+```
