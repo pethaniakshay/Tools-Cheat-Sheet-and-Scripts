@@ -114,3 +114,10 @@ mysqldump -u [user] -p[pass] --no-create-info mydb > mydb.sql
 # To export to file (structure only)
 mysqldump -u [user] -p[pass] --no-data mydb > mydb.sql
 ```
+
+
+##### Change collate to support the Gujarati and other language
+
+```
+ALTER TABLE mytable CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+```
