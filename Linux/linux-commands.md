@@ -1,6 +1,6 @@
 ###### journalctl see live log
 
 ```
-journalctl -u gyan-dev.service -f
+journalctl -u xyz.service -f
 ```
 
