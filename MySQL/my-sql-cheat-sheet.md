@@ -25,59 +25,6 @@ mysql -u root -P 3308 -p
 SHOW VARIABLES LIKE "%version%";
 ```
 
-
-##### Initialize MySQL for first time
-
-```
-Note: First create folder named data in the mysql root directory
-
-With Default password that can be fund from log file that will be located in data folder:
-  mysqld --initialize
-
-With no default password and username as root
-  mysqld --initialize-insecure
-  
-With custom root username
-  mysqld --initialize-insecure --user=akshay
-  
-  Note:  Add   --explicit_defaults_for_timestamp = 1   as argument if you get timestamp error.
-```
-
-
-##### MySQL Minimal ini file that have to be created while first time installtion in the root dir
-
-```
-[mysqld]
-
-basedir = "/mysql-5.7.17"
-datadir = "/mysql-5.7.17/data"
-port = 3306
-server_id = 1
-log_error = "mysql_error.log"
-pid_file = "mysql.pid"
-socket = "/mysql-5.7.17/mysql.sock"
-
-# Optional - Default Configuration
-max_allowed_packet = 8M
-key_buffer_size=16M
-
-# Where do all the plugins live
-plugin_dir = "/mysql-5.7.17/lib/plugin/"
-```
-
-
-##### Install / Remove MySQL as a windows service
-
-```
-Note: run window cmd as admin mode
-
-mysqld --install-manual
-
-mysqld --install
-
-mysqld --remove
-```
-
 ##### Create New Root Privilaged User
 
 ```
@@ -102,6 +49,7 @@ SET FOREIGN_KEY_CHECKS=0;
 SET FOREIGN_KEY_CHECKS=1;
 ```
 
+
 ##### Get MySQL dump import [database with data in .sql file]
 
 ```
@@ -121,3 +69,58 @@ mysqldump -u [user] -p[pass] --no-data mydb > mydb.sql
 ```
 ALTER TABLE mytable CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
+
+
+## Install MySQL In Windows
+
+  ##### Initialize MySQL for first time
+
+  ```
+  Note: First create folder named data in the mysql root directory
+
+  With Default password that can be fund from log file that will be located in data folder:
+    mysqld --initialize
+
+  With no default password and username as root
+    mysqld --initialize-insecure
+
+  With custom root username
+    mysqld --initialize-insecure --user=akshay
+
+    Note:  Add   --explicit_defaults_for_timestamp = 1   as argument if you get timestamp error.
+  ```
+
+
+  ##### MySQL Minimal ini file that have to be created while first time installtion in the root dir
+
+  ```
+  [mysqld]
+
+  basedir = "/mysql-5.7.17"
+  datadir = "/mysql-5.7.17/data"
+  port = 3306
+  server_id = 1
+  log_error = "mysql_error.log"
+  pid_file = "mysql.pid"
+  socket = "/mysql-5.7.17/mysql.sock"
+
+  # Optional - Default Configuration
+  max_allowed_packet = 8M
+  key_buffer_size=16M
+
+  # Where do all the plugins live
+  plugin_dir = "/mysql-5.7.17/lib/plugin/"
+  ```
+
+
+  ##### Install / Remove MySQL as a windows service
+
+  ```
+  Note: run window cmd as admin mode
+
+  mysqld --install-manual
+
+  mysqld --install
+
+  mysqld --remove
+  ```
