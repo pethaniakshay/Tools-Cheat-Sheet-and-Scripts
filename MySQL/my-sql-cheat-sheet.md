@@ -147,3 +147,13 @@ SELECT table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024)
 ```
 SELECT sum(char_length($your_column))/1024/1024 FROM $your_table
 ```
+
+
+##### Uninstall MySQL from Ubuntu
+
+```
+sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+sudo rm -rf /etc/mysql /var/lib/mysql
+sudo apt-get autoremove
+sudo apt-get autoclean
+```
