@@ -57,7 +57,7 @@ sudo source /etc/sudoers
 
 ##### convert aws pem to standard rsa key
 
-Reference: https://stackoverflow.com/questions/17733536/how-to-convert-a-private-key-to-an-rsa-private-key
+Reference: https://stackoverflow.com/a/17734645/4439996
 ```
 openssl rsa -in server.key -out server_new.key
 
