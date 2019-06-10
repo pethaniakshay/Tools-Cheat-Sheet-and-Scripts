@@ -51,4 +51,17 @@ Enter the following line in the opened file:
 jenkins ALL=(ALL) NOPASSWD: ALL
 
 where jenkins is the user name
+
+sudo source /etc/sudoers
 ```
+
+##### convert aws pem to standard rsa key
+
+Reference: https://stackoverflow.com/questions/17733536/how-to-convert-a-private-key-to-an-rsa-private-key
+```
+openssl rsa -in server.key -out server_new.key
+
+openssl pkcs8 -topk8 -nocrypt -in privkey.pem
+```
+
+
