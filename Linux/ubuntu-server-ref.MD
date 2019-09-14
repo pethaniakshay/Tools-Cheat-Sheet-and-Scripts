@@ -64,4 +64,7 @@ openssl rsa -in server.key -out server_new.key
 openssl pkcs8 -topk8 -nocrypt -in privkey.pem
 ```
 
+#### list all users
+
+``` awk -F: '{ print $1}' /etc/passwd ```
 
