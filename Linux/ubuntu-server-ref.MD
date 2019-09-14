@@ -66,5 +66,7 @@ openssl pkcs8 -topk8 -nocrypt -in privkey.pem
 
 #### list all users
 
-``` awk -F: '{ print $1}' /etc/passwd ```
+``` 
+awk -F: '{ print $1}' /etc/passwd
+```
 
