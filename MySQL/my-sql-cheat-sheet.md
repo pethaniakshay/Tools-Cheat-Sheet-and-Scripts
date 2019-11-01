@@ -181,3 +181,12 @@ sudo apt install mysql-server
 
 sudo mysql_secure_installation
 ```
+
+##### Allow remote login
+
+```
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+```
+
+change ``` bind-address = 127.0.0.1 ``` to ``` # bind-address = 127.0.0.1``` or add any specific host
