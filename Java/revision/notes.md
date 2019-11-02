@@ -8,6 +8,8 @@
 
 * ``` import java.*; ``` Will compile but not work. If want you define the ```ArrayList``` then you have to import the ``` import java.util.ArrayList;``` or ```import java.util.*;```
 
+* A class can be declared with only public or default access; the other two access control levels don’t make sense for a class
+
 
 ### strictfp keyword
 
