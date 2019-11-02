@@ -35,4 +35,6 @@
   {
       double sum();
       strictfp double mul(); // compile-time error here
-  }```
+  }
+  ```
+  
