@@ -48,3 +48,10 @@ git push -f
 6. If you see the both modified files in ``` git status ``` then stage these file by ``` git add <file name> ```
 
 7. You can commit your changes
+
+
+##### Change the remote url
+
+```
+git remote set-url --push origin ssh://user@example.com:XX/package/name.git
+```
