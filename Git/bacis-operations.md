@@ -55,3 +55,13 @@ git push -f
 ```
 git remote set-url --push origin ssh://user@example.com:XX/package/name.git
 ```
+
+
+##### Migrate git repo from gitlab to github (Technically from any server to any server)
+
+```
+git remote add github https://yourLogin@github.com/yourLogin/yourRepoName.git
+
+
+git push --mirror github
+```
