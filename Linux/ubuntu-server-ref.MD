@@ -70,3 +70,6 @@ openssl pkcs8 -topk8 -nocrypt -in privkey.pem
 awk -F: '{ print $1}' /etc/passwd
 ```
 
+#### Enable SSH login with password
+
+https://serverpilot.io/docs/how-to-enable-ssh-password-authentication/
