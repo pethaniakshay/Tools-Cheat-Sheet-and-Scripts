@@ -8,3 +8,7 @@
 - Compose mental model
   <br>
   https://developer.android.com/jetpack/compose/mental-model
+- Layout advance
+  <br>
+  https://developer.android.com/jetpack/compose/layouts/intrinsic-measurements
+  <br>
