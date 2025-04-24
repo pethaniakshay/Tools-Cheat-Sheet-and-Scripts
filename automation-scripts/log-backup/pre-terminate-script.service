@@ -1,0 +1,12 @@
+[Unit]
+Description=Run script before shutdown
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/ubuntu/scripts/log-backup.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=halt.target reboot.target shutdown.target
